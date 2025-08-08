@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Website created by Seth Roark. Some games and some of my music that I created.">
+    
+    <title>Random Links</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/4906/4906292.png">
+    <style>
+        :root {
+          scroll-behavior: smooth;
+        }
+        body{
+        height: 100%;
+        background: white;
+        font-family: sans-serif;
+        color: white;
+        overflow: inherit;
+        max-width: 840px;
+        align-items: center;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: sticky;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        background-color: blue;
+        }
+        .home{
+        background-image: linear-gradient(360deg, #101010, #353a4a);
+        min-width: 600px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #353a4a;          
+        height: 100%;
+        background-attachment: fixed
+        }
+      .nav {
+        background-image: linear-gradient(120deg, rgba(91, 98, 110, 0.50), #404752);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        box-shadow: 8px 8px 10px rgba( 0, 0, 0, .25);
+        border-radius: 15px;
+        height: auto%;
+        width: 640px;
+        bottom: 0;
+        margin: auto;
+        position: sticky;
+        z-index: 4;
+        transition: all 0.15s ease;
+        top: -1px;
+      }
+      .nav.is-pinned{
+        border-radius: 0px 0px 15px 15px;
+        background-color: #000000AA;
+        background-image: linear-gradient(120deg, rgba(91, 98, 110, 0.50), #00000000);
+        max-width: 920px;
+        width: 810px;
+        margin: auto;
+      }
+      .title{
+        color: #FFF;
+      	font-family: Arial;
+      	text-align: center;
+      	top: 5px;
+      	margin-left: 10px;
+      	margin-top: 0px;
+      }
+      .mbody{
+        background-image: linear-gradient(120deg, rgba(91, 98, 110, 0.50), rgba(64, 71, 82, 0.25));
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        height: 100%;
+        padding-bottom: 20px;
+        padding-top: 5px;
+        box-shadow: 8px 8px 10px rgba(0,0,0,0.25);
+        margin-bottom: 10px;
+        
+        
+      }
+      .mpage{
+        height: 100%;
+        border-radius: 15px;
+        max-width: 920px;
+        margin: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: auto;
+      }
+      .bodytext{
+        margin-left: 25px;
+        margin-right: 25px;
+        border-radius: 10px;
+      }
+      .links{
+        text-decoration: none;
+        font-weight: bold;
+        color: #FFF;
+        animation-delay: 2s;
+        transition: 0.15s;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin:auto;
+      }
+      .links:hover{
+        //font-size: 102%;
+        color: #FF3;
+        text-decoration: underline;
+      }
+      .insideBody{
+        font-weight: bold;
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.75);
+        width: auto;
+        margin: auto;
+        max-width: 960px;
+        border-radius: 10px;
+        padding-bottom: 15px;
+        height: auto;
+        background-image: linear-gradient(180deg, #232733, #353a4a);
+      }
+      .gtitle{
+        text-align: center;
+        margin-top: 10px;
+        padding-top: 5px;
+      }
+      .iframe{
+        background-color: black;
+        min-width: 96%;
+        margin: auto;
+        height: 30px;
+        border-radius: 5px;
+        width: 96%;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      .bp{
+        margin-left: 10px;
+        margin-right: 10px;
+        transition: 0.05s;
+        cursor: default;
+      }
+      .list{
+        max-height: 250px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: rgba(91, 98, 110, 0.50);
+        border-radius: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        scrollbar-width: none;
+      }
+      .gmrow{
+        display: flex;
+      }
+      .gm{
+        height: 150px;
+        width: 120px;
+        background-color: rgba(91, 98, 110, 0.50);
+        margin-left: 15px;
+        border-radius: 10px;
+        transition: 0.15s;
+        margin-bottom: 15px;
+      }
+      .gm:hover{
+        box-shadow: 5px 5px 0px rgba(255, 211, 51, 1);
+      }
+      .gmimg{
+        width: 120px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px 10px 0px 0px;
+      }
+      .gmtxt{
+        font-size: 14px;
+        min-width: 120px;
+        text-align: center;
+      }
+      .stt {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: #818D92 url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='white' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+        box-shadow: 0 0.25rem 0.5rem 0 gray;
+        opacity: 0.7;
+      }
+      .stt:hover {
+        opacity: 0.8;
+        background: #818D92 url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='rgb(195, 255, 243)' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+      }
+      .stt:focus {
+        opacity: 0.9;
+      }
+      .stt:active {
+        opacity: 1;
+      }
+      .ads{
+        border-radius: 10px;
+      }
+      strong {
+        color: #6ec7a9;
+      }
+    </style>
+  </head>
+  <body class="home">
+    <div class="mpage">
+    <!--Navigation-->
+    <div class="nav">
+      <div class="title">
+        <h1>Random Links</h1>
+      </div>
+    </div>
+    <!--JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      const el = document.querySelector(".nav")
+      const observer = new IntersectionObserver( 
+      ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+      { threshold: [1] }
+      );
+
+      observer.observe(el);
+    </script>
+    <!--End of JavaScript-->
+    
+    <!--Body-->
+    <div class="mbody">
+      <div class="bodytext">
+        
+        <div class="insideBody">
+          <h1 class="gtitle">Music</h1>
+          <h2 style="font-weight:bold; margin-left: 15px;">Restoration:</h2>
+          <iframe class="iframe"src="https://archive.org/embed/restoration-album"  frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+          <div class="list">
+          <ol>
+            <li class="bp">Broken</li><li class="bp">Well or ill</li><li class="bp">A New Day</li><li class="bp">Friends and Help</li><li class="bp">Restoration</li><li class="bp">Oceans</li><li class="bp">Excitement</li><li class="bp">Excitement (Sped Up in the key of Dm)</li><li class="bp">The Adventure</li><li class="bp">Flying Pigs</li><li class="bp">The Forest</li><li class="bp">Birds</li><li class="bp">Orion</li><li class="bp">Change My Life</li><li class="bp">Save Me</li><li class="bp">Fake Life</li><li class="bp">Run, Fly, Die...</li><li class="bp">Restoration Pt.2</li><li class="bp">WAKE UP</li><li class="bp">Cocoa Beans</li><li class="bp">Love Your Life</li><li class="bp">Am I ...Crazy?</li><li class="bp">Ambient</li><li class="bp">Imaginary Party</li><li class="bp">Much Better</li>
+          </ol>
+          </div>
+          <br>
+          <h2 style="font-weight:bold; margin-left: 15px;">Friends and Strangers:</h2>
+          <iframe class="iframe"src="https://archive.org/embed/08-safe-place"  frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+          <div class="list">
+          <ol>
+            <li class="bp">Hello</li>
+            <li class="bp">How Are You</li>
+            <li class="bp">Good. You</li>
+            <li class="bp">Livin' Life</li>
+            <li class="bp">Runnin' Free</li>
+            <li class="bp">Run With Me</li>
+            <li class="bp">Hide</li>
+            <li class="bp">Safe Place</li>
+            <li class="bp">Death</li>
+            <li class="bp">Alone</li>
+            <li class="bp">Sadness</li>
+            <li class="bp">Crying</li>
+            <li class="bp">Save the World <strong>-Not Available-</strong></li>
+            <li class="bp">Save the World Pt.2</li>
+            <strong><li class="bp">-Not Available-</strong></li>
+            <li class="bp">Twisted Emotions</li>
+          </ol>
+          </div>
+          <br>
+          <h2 style="font-weight:bold; margin-left: 15px;">Modern Art:</h2>
+          <iframe class="iframe"src="https://archive.org/embed/04-modern-art"  frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+          <div class="list">
+          <ol>
+            <li class="bp">Intro</li>
+            <li class="bp">Evening Time</li>
+            <li class="bp">Washed Out</li>
+            <li class="bp">Modern Art</li>
+            <li class="bp">Droplets in Heaven</li>
+            <li class="bp">Clean</li>
+            <li class="bp">Alive</li>
+            <li class="bp">Ascend</li>
+            <li class="bp">Lightnig Rainfall</li>
+            <li class="bp">Montrosity</li>
+            <li class="bp">Rave</li>
+            <li class="bp">Scuff</li>
+            <li class="bp">The Main Theme</li>
+            <li class="bp">Colorful</li>
+            <li class="bp">Then Dull</li>
+            <li class="bp">Retro Art</li>
+            <li class="bp">Joyride to Paradise</li>
+            <li class="bp">Digital Minds</li>
+            <li class="bp">The Mission</li>
+            <li class="bp">Stolen</li>
+          </ol>
+          </div>
+        </div>
+        <div class="insideBody">
+        <h1 class="gtitle">Game Links</h1>
+        <div class="main">
+          <div class="gmrow">
+        <div class="gm">
+        <a class="links" style="margin-top: 15px;" href="page1.html" target="_self"><img class="gmimg" src="https://i.ibb.co/k6MZZTJr/image-1.png"><div class="gmtxt">EaglercraftX 1.8</div></a>
+        </div>
+        <div class="gm">
+        <a class="links" style="margin-top: 15px;" href="snake.html" target="_self"><img class="gmimg" style="background-color:white; border-radius:10px; " src="https://cdn4.iconfinder.com/data/icons/miscellaneous-44/24/snake-game-512.png"><div class="gmtxt">Snake</div></a>
+        </div>
+        <div class="gm">
+        <a class="links" style="margin-top: 15px;" href="https://luts91.github.io/idle-dices/"><img class="gmimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlf7TxULQ3-1-H_BF-9271AlF58cVdCggcP2dCBYvg69VFW84:https://image.winudf.com/v2/image1/Y29tLmppbWJvcC5kaWNldHljb29uX2ljb25fMTU3NDI0NjMxOF8wOTM/icon.png%3Fw%3D184%26fakeurl%3D1&s"><div class="gmtxt">Idle Dice</div></a>
+        </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+      
+      <a href='#' class="stt" title="Scroll to Top"></a>
+
+    </div>
+    
+    </div>
+  </body>
+</html>
